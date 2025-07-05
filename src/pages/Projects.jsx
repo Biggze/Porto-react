@@ -17,7 +17,7 @@ const Projects = () => (
             {portfolioData.projects.map(project => (
                 <Link to={`/projects/${project.slug}`} key={project.id} className="group block">
                     <div className="relative rounded-xl overflow-hidden mb-4">
-                        <img src={project.image} alt={`Gambar Proyek ${project.title}`} className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
+                        <img src={project.image} alt={`Gambar Proyek ${project.title}`} className="w-full h-50 transform group-hover:scale-105 transition-transform duration-300" />
                         {project.featured && (
                             <div className="absolute top-3 right-3 bg-blue-500 text-white text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
                                 <Star size={12} className="inline-block" />
