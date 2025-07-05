@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom'; 
 
 // Impor semua komponen Anda
-import Sidebar from './pages/Sidebar.jsx';
 import Home from './pages/home.jsx';
+import Sidebar from './pages/Sidebar.jsx';
 import About from './pages/About.jsx';
 import Achievements from './pages/Achievements.jsx';
 import Projects from './pages/Projects.jsx';
@@ -53,7 +53,9 @@ export default function App() {
           />
           <main className="lg:col-span-9">
             <Routes>
+
               <Route path="/" element={<Home />} />
+           
               <Route path="/about" element={<About />} />
               {/* <Route path="/achievements" element={<Achievements />} /> */}
               <Route path="/projects" element={<Projects />} />
