@@ -10,6 +10,7 @@ import Projects from './pages/Projects.jsx';
 import Achievements from './pages/Achievements.jsx';
 import ProjectDetail from './pages/ProjectDetail.jsx';
 import Contact from './pages/Contact.jsx';
+import Dashboard from './pages/Dashboard.jsx';
 
 export default function App() {
   // State untuk tema tetap ada
@@ -58,6 +59,7 @@ export default function App() {
               <Route path="/projects" element={<Projects />} />
               {/* <Route path="/projects/:projectSlug" element={<ProjectDetail />} /> */}
               <Route path="/contact" element={<Contact />} />
+              <Route path='/dashboard'element= {<Dashboard />} />
               
               {/* Rute default jika tidak ada yang cocok */}
               <Route path="*" element={<Home />} />

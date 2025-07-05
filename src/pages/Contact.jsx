@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Instagram, Linkedin,Github, Send } from 'react-feather';
+import { Mail, Instagram, Linkedin,GitHub, Send } from 'react-feather';
 import portfolioData from '../data/Data.js'; 
 
 const SocialCard = ({ href, icon, title, description, buttonText, gradient }) => (
@@ -72,7 +72,7 @@ const Contact = () => {
                     />
                     <SocialCard 
                         href="#"
-                        icon={<Github size={32} />}
+                        icon={<GitHub size={32} />}
                         title="Explore the Code"
                         description="Explore the source code for all my projects on GitHub."
                         buttonText="Go to Github"
