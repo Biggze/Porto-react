@@ -28,7 +28,7 @@ const portfolioData = {
       { id: 1, title: "satriabahari.site", description: "Personal website & portfolio, built from scratch using Next.js, TypeScript, Tail...", image: "https://placehold.co/600x400/1a202c/ffffff?text=satriabahari.site", featured: true, tech: ["typescript", "react", "nextjs", "tailwindcss"] },
       { id: 2, title: "Berbagi.link", description: "Berbagi.link is a mini-website platform for online businesses but lacks mobile f...", image: "https://placehold.co/600x400/34d399/ffffff?text=Berbagi.link", featured: true, tech: ["kotlin"] },
       { id: 3, title: "Robust", description: "Robust Fitness is a platform designed to help users achieve their fitness goals ...", image: "https://placehold.co/600x400/e74c3c/ffffff?text=Robust+Fitness", featured: false, login: true, tech: ["php", "laravel", "vuejs"] },
-      { id: 4, title: "Digital Business", description: "Revolutionize your business with our digital solutions, offering innovative serv...", image: "https://placehold.co/600x400/9b59b6/ffffff?text=Digital+Business", featured: false, tech: ["typescript", "astro", "tailwindcss"] }
+      { id: 4, title: "Digital Business", description: "Revolutionize your business with our digital solutions, offering innovative serv...", image: "https://placehold.co/600x400/9b59b6/ffffff?text=Digital+Business", featured: false, tech: ["reactjs", "astro", "tailwindcss"] }
     ]
   };
 
