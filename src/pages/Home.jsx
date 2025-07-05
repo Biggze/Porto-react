@@ -38,8 +38,6 @@ const Home = () => (
         ))}
       </ul>
     </div>
-
-    {/* SERVICE SECTION */}
     <div className="py-8">
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 flex items-center">
         <Server size={24} className="mr-3" />Service
