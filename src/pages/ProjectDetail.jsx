@@ -1,14 +1,16 @@
 
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Link as LinkIcon } from 'react-feather';
+import { ArrowLeft, Link as LinkIcon , GitHub} from 'react-feather';
 import portfolioData from '../data/Data.js';
 
 const ProjectDetail = () => {
-    const { projectSlug } = useParams();
+    const { slug } = useParams(); // huruf kecil!
+
     const navigate = useNavigate();
     
-    const project = portfolioData.projects.find(p => p.slug === projectSlug);
+    const project = portfolioData.projects.find(p => p.slug.toLowerCase() === slug.toLowerCase());
+
 
     if (!project) {
         return (
@@ -35,16 +37,15 @@ const ProjectDetail = () => {
             <div className="flex flex-wrap gap-6 justify-between items-center mb-8">
                 <div className="flex items-center gap-4">
                     <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Tech Stack :</span>
-                    {/* Di sini Anda bisa menampilkan ikon teknologi secara dinamis */}
                 </div>
                 <div className="flex items-center space-x-4">
-                    <a href="#" className="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-blue-500"><Github size={16} className="mr-2" />Source Code</a>
+                    <a href="#" className="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-blue-500"><GitHub size={16} className="mr-2" />Source Code</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
                     <a href="#" className="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-blue-500"><LinkIcon size={16} className="mr-2" />Live Demo</a>
                 </div>
             </div>
             <div className="mb-8">
-                <img src={project.showcaseImage} alt={`Showcase ${project.title}`} className="w-full h-auto rounded-xl shadow-md" />
+                <img src={project.image} alt={`Showcase ${project.title}`} className="w-full h-auto rounded-xl shadow-md" />
             </div>
             <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 leading-relaxed">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">Introduction</h3>
@@ -56,7 +57,10 @@ const ProjectDetail = () => {
                     <li>Another important feature.</li>
                 </ul>
             </div>
+            
         </div>
+
+        
     );
 };
 

@@ -66,10 +66,10 @@ const portfolioData = {
     //   { id: 4, title: "Belajar Dasar Git Dengan Github", issuer: "Dicoding Indonesia", date: "November 2024", imageSrc: "https://placehold.co/600x400/F3F4F6/333333?text=Sertifikat+Dicoding", modalImageSrc: "https://placehold.co/800x600/2D3748/FFFFFF?text=Sertifikat+Dicoding+Besar", credentialId: "1OP84Q42QZQK", logo: "https://placehold.co/20x20/2D3748/FFFFFF?text=D", badge: null },
     // ],
     projects: [
-      { id: 1, title: "Sistem Kepegawaian", description: "This Employee Management System simplifies HR processes including performance evaluation, warning letter generation, and online asset borrowing. Built to improve efficiency and transparency in HR operations.", image: "img/kepegawaian.png", featured: true, tech: ["Laravel", "HTML","CSS","JavaScript","PHP"] },
-      { id: 2, title: "Personal Website", description: "Personal website & portfolio, built using React.JS,TailwindCSS", image: "img/porto.png", featured: true, tech: ["ReactJS","TailwindCSS"] },
-      { id: 3, title: "Pengembangan Capstone", description: "A website designed to help lecturers easily manage student data for those who have registered or will register for the capstone project.", image: "img/capstone.png", featured: false, login: true, tech: ["ReactJS", "ExpressJS", "Tailwind"] },
-      { id: 4, title: "Sipetani", description: "A website designed to assist farmers in predicting soil pH levels, which helps determine whether the land is suitable for planting certain crops, using Artificial Intelligence.", image: "img/Sipetani.png", featured: false, tech: ["Laravel", "HTML", "CSS","JavaScript"] }
+      { id: 1, title: "Sistem Kepegawaian",slug: "sistem-kepegawaian", description: "This Employee Management System simplifies HR processes including performance evaluation, warning letter generation, and online asset borrowing. Built to improve efficiency and transparency in HR operations.", image: "/img/kepegawaian.png", featured: true, tech: ["Laravel", "HTML","CSS","JavaScript","PHP"] },
+      { id: 2, title: "Personal Website",slug:"personal-website", description: "Personal website & portfolio, built using React.JS,TailwindCSS", image: "/img/porto.png", featured: true, tech: ["ReactJS","TailwindCSS"] },
+      { id: 3, title: "Pengembangan Capstone",slug: "pengembangan-capstone", description: "A website designed to help lecturers easily manage student data for those who have registered or will register for the capstone project.", image: "/img/capstone.png", featured: false, login: true, tech: ["ReactJS", "ExpressJS", "Tailwind"] },
+      { id: 4, title: "Sipetani",slug: "sipetani", description: "A website designed to assist farmers in predicting soil pH levels, which helps determine whether the land is suitable for planting certain crops, using Artificial Intelligence.", image: "/img/Sipetani.png", featured: false, tech: ["Laravel", "HTML", "CSS","JavaScript"] }
     ],
 
     articles: [

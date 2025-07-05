@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 // Impor semua komponen Anda
 import Sidebar from './pages/Sidebar.jsx';
-import Home from './pages/Home.jsx';
+import Home from './pages/home.jsx';
 import About from './pages/About.jsx';
 import Achievements from './pages/Achievements.jsx';
 import Projects from './pages/Projects.jsx';
