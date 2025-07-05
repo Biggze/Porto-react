@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom'; 
 
 // Impor semua komponen Anda
-import Home from './pages/home.jsx';
+import Home from './pages/Home_temp.jsx';
 import Sidebar from './pages/Sidebar.jsx';
 import About from './pages/About.jsx';
 import Achievements from './pages/Achievements.jsx';
