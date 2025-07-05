@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 // PERBAIKAN: Impor komponen Sidebar dan About
 import Sidebar from './pages/Sidebar.jsx'; // Pastikan path ini benar
 import About from './pages/About.jsx';     
-import Home from './pages/home.jsx';    // Pastikan path ini benar
+import Home from './pages/Home.jsx';    // Pastikan path ini benar
 import Projects from './pages/Projects.jsx';
 import Achievements from './pages/Achievements.jsx';
 import ProjectDetail from './pages/ProjectDetail.jsx';
