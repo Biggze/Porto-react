@@ -50,7 +50,7 @@ const Home = () => (
       <div className="bg-gray-100 dark:bg-gray-900 p-6 rounded-xl">
         <h4 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Let's work together!</h4>
         <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-          I'm open for freelance projects, feel free to email me to see how can we collaborate.
+          Feel free to email me to see how can we collaborate.
         </p>
         <a href="/contact">
           <button className="bg-gray-800 dark:bg-gray-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors duration-200">

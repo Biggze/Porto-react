@@ -66,7 +66,7 @@ const portfolioData = {
     //   { id: 4, title: "Belajar Dasar Git Dengan Github", issuer: "Dicoding Indonesia", date: "November 2024", imageSrc: "https://placehold.co/600x400/F3F4F6/333333?text=Sertifikat+Dicoding", modalImageSrc: "https://placehold.co/800x600/2D3748/FFFFFF?text=Sertifikat+Dicoding+Besar", credentialId: "1OP84Q42QZQK", logo: "https://placehold.co/20x20/2D3748/FFFFFF?text=D", badge: null },
     // ],
     projects: [
-      { id: 1, title: "adelnofalsite-mocha.vercel.app/", description: "Personal website & portfolio, built using React.JS,TailwindCSS", image: "https://placehold.co/600x400/1a202c/ffffff?text=satriabahari.site", featured: true, tech: ["vite", "react", "tailwindcss"] },
+      { id: 1, title: "adelnofalsite-mocha.vercel.app/", description: "Personal website & portfolio, built using React.JS,TailwindCSS", image: "img/porto.png", featured: true, tech: ["vite", "react", "tailwindcss"] },
       { id: 2, title: "Berbagi.link", description: "Berbagi.link is a mini-website platform for online businesses but lacks mobile f...", image: "https://placehold.co/600x400/34d399/ffffff?text=Berbagi.link", featured: true, tech: ["kotlin"] },
       { id: 3, title: "Robust", description: "Robust Fitness is a platform designed to help users achieve their fitness goals ...", image: "https://placehold.co/600x400/e74c3c/ffffff?text=Robust+Fitness", featured: false, login: true, tech: ["php", "laravel", "vuejs"] },
       { id: 4, title: "Digital Business", description: "Revolutionize your business with our digital solutions, offering innovative serv...", image: "https://placehold.co/600x400/9b59b6/ffffff?text=Digital+Business", featured: false, tech: ["reactjs", "astro", "tailwindcss"] }
