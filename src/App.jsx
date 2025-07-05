@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom'; 
 
 // PERBAIKAN: Impor komponen Sidebar dan About
-import Sidebar from './components/Sidebar.jsx'; // Pastikan path ini benar
+import Sidebar from './pages/Sidebar.jsx'; // Pastikan path ini benar
 import About from './pages/About.jsx';     
 import Home from './pages/home.jsx';    // Pastikan path ini benar
 import Projects from './pages/Projects.jsx';
