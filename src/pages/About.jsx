@@ -56,17 +56,33 @@ const About = () => {
                     ))}
                 </div>
             </div>
-            <div className="py-8 border-t border-gray-200 dark:border-gray-700">
+              <div className="py-8 border-t border-gray-200 dark:border-gray-700">
                 <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
                     <div>
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 flex items-center"><Award size={24} className="mr-3" />Education</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                            <Award size={24} className="mr-3" />
+                            Education
+                        </h3>
                         <p className="text-gray-600 dark:text-gray-400">My educational journey.</p>
                     </div>
                     <div className="flex space-x-2">
-                        <button className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors"><Download size={16} /><span>Download Portfolio</span></button>
-                        <button className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors"><Download size={16} /><span>Download Resume</span></button>
+                            <a 
+                            href="#" 
+                            download="#" 
+                            className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors">
+                            <Download size={16} />
+                            <span>Download Portfolio</span>
+                        </a>
+                        <a 
+                            href="CV/Adel Noval.pdf" 
+                            download="Adel Noval.pdf" 
+                            className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors">
+                            <Download size={16} />
+                            <span>Download Resume</span>
+                        </a>
                     </div>
                 </div>
+
                 <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl">
                     <div className="flex items-start space-x-4">
                         <img src={portfolioData.education.logo} alt={`Logo ${portfolioData.education.university}`} className="w-12 h-12 rounded-lg object-cover flex-shrink-0" />
@@ -74,7 +90,9 @@ const About = () => {
                             <h4 className="font-bold text-gray-900 dark:text-white">{portfolioData.education.university}</h4>
                             <p className="text-sm text-gray-600 dark:text-gray-400">{portfolioData.education.degree}</p>
                             <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-500 mt-2">
-                                <span>{portfolioData.education.duration}</span><span>⋅</span><span>{portfolioData.education.location}</span>
+                                <span>{portfolioData.education.duration}</span>
+                                <span>⋅</span>
+                                <span>{portfolioData.education.location}</span>
                             </div>
                         </div>
                     </div>
