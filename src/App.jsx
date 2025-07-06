@@ -13,7 +13,6 @@ import Articles from './pages/Articles.jsx';
 import ArticleDetail from './pages/ArticleDetail.jsx';
 import Contact from './pages/Contact.jsx';
 import Dashboard from './pages/Dashboard.jsx';
-import ScrollToTop from './components/ScroolToTop.jsx';
 
 export default function App() {
   // State untuk tema (terang/gelap)
@@ -46,7 +45,6 @@ export default function App() {
 
   return (
     <Router>
-      <ScrollToTop />
       <div className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-300 min-h-screen">
         <div className="container mx-auto p-4 md:p-8">
           {/* INI BAGIAN KUNCI UNTUK RESPONSIVE LAYOUT */}
@@ -56,8 +54,7 @@ export default function App() {
             <Sidebar 
               theme={theme}
               onThemeToggle={handleThemeToggle}
-              onClose={() => setSidebarOpen(false)} 
-
+              
             />
             
             {/* Kolom untuk Konten Utama */}
