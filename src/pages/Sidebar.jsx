@@ -32,6 +32,7 @@ const Sidebar = ({ theme, onThemeToggle }) => {
       { icon: <User size={20} />, label: 'About', to: '/about' },
       // { icon: <Award size={20} />, label: 'Achievements', to: '/achievements' },
       { icon: <Briefcase size={20} />, label: 'Projects', to: '/projects' },
+       { icon: <Award size={20} />, label: 'Sertifikat', to: '/certificates' }, 
       { icon: <BarChart2 size={20} />, label: 'Dashboard', to: '/dashboard' },
        { icon: <Briefcase size={20} />, label: 'Articles', to: '/articles' },
       { icon: <Mail size={20} />, label: 'Contact', to: '/contact' },

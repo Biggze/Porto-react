@@ -13,6 +13,7 @@ import Articles from './pages/Articles.jsx';
 import ArticleDetail from './pages/ArticleDetail.jsx';
 import Contact from './pages/Contact.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import Certificates from './pages/Certificates.jsx';
 
 export default function App() {
   // State untuk tema (terang/gelap)
@@ -64,6 +65,7 @@ export default function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/:slug" element={<ProjectDetail />} />
+                <Route path="/certificates" element={<Certificates />} />
                 <Route path="/articles" element={<Articles />} />
                 <Route path="/articles/:slug" element={<ArticleDetail />} />
                 <Route path="/contact" element={<Contact />} />

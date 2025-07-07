@@ -59,18 +59,45 @@ const portfolioData = {
   }
 ],
     education: { university: "Jember University", degree: "Bachelor's degree ⋅ Informatics,", duration: "2022 - Present", location: "Jember, Indonesia", logo: "img/UNEJ.png" },
-    // achievements: [
-    //   { id: 1, title: "Best Team: Bangkit Company Track Capstone Project", issuer: "Bangkit Academy", date: "January 2025", imageSrc: "https://placehold.co/600x400/F3F4F6/333333?text=Sertifikat+Bangkit", modalImageSrc: "https://placehold.co/800x600/3B82F6/FFFFFF?text=Sertifikat+Bangkit+Besar", credentialId: "", logo: "https://placehold.co/20x20/FF0000/FFFFFF?text=B", badge: "award" },
-    //   { id: 2, title: "Certificate of Completion Bangkit Academy", issuer: "Bangkit Academy", date: "January 2025", imageSrc: "https://placehold.co/600x400/F3F4F6/333333?text=Sertifikat+Bangkit", modalImageSrc: "https://placehold.co/800x600/3B82F6/FFFFFF?text=Sertifikat+Bangkit+Besar", credentialId: "", logo: "https://placehold.co/20x20/FF0000/FFFFFF?text=B", badge: null },
-    //   { id: 3, title: "Sertifikat Kepesertaan Studi Independen", issuer: "Kampus Merdeka", date: "December 2024", imageSrc: "https://placehold.co/600x400/F3F4F6/333333?text=Sertifikat+MSIB", modalImageSrc: "https://placehold.co/800x600/3B82F6/FFFFFF?text=Sertifikat+MSIB+Besar", credentialId: "", logo: "https://placehold.co/20x20/3B82F6/FFFFFF?text=KM", badge: null },
-    //   { id: 4, title: "Belajar Dasar Git Dengan Github", issuer: "Dicoding Indonesia", date: "November 2024", imageSrc: "https://placehold.co/600x400/F3F4F6/333333?text=Sertifikat+Dicoding", modalImageSrc: "https://placehold.co/800x600/2D3748/FFFFFF?text=Sertifikat+Dicoding+Besar", credentialId: "1OP84Q42QZQK", logo: "https://placehold.co/20x20/2D3748/FFFFFF?text=D", badge: null },
-    // ],
     projects: [
       { id: 1, title: "Sistem Kepegawaian",slug: "sistem-kepegawaian", description: "This Employee Management System simplifies HR processes including performance evaluation, warning letter generation, and online asset borrowing. Built to improve efficiency and transparency in HR operations.", image: "/img/kepegawaian.png", featured: true, tech: ["Laravel", "HTML","CSS","JavaScript","PHP"] },
       { id: 2, title: "Personal Website",slug:"personal-website", description: "Personal website & portfolio, built using React.JS,TailwindCSS", image: "/img/porto.png", featured: true, tech: ["ReactJS","TailwindCSS"] },
       { id: 3, title: "Pengembangan Capstone",slug: "pengembangan-capstone", description: "A website designed to help lecturers easily manage student data for those who have registered or will register for the capstone project.", image: "/img/capstone.png", featured: false, login: true, tech: ["ReactJS", "ExpressJS", "Tailwind"] },
       { id: 4, title: "Sipetani",slug: "sipetani", description: "A website designed to assist farmers in predicting soil pH levels, which helps determine whether the land is suitable for planting certain crops, using Artificial Intelligence.", image: "/img/Sipetani.png", featured: false, tech: ["Laravel", "HTML", "CSS","JavaScript"] }
     ],
+
+  certificates : [
+{
+  id: 2,
+  title: 'Informatics Olympiad', 
+  issuer: 'Universitas ABC',
+  role: 'Ketua Panitia', 
+  year: '2022',
+  imageUrl: '/img/IO.png',
+  description: '...',
+  jobdesk: '...'
+},
+{
+  id: 3,
+  title: 'IF Order',
+  issuer: 'Dicoding Indonesia',
+  role: 'Coordinator Perlengkapan', 
+  year: '2022',
+  imageUrl: '/img/diklat.png',
+  description: '...',
+  jobdesk:""
+},
+{
+  id: 4,
+  title: 'Informatics Olympiad',
+  issuer: 'Dicoding Indonesia',
+  role: 'Coordinator Perlengkapan', 
+  year: '2022',
+  imageUrl: '/img/io23.png',
+  description: '...',
+  jobdesk:""
+}
+],
 
     articles: [
     {
@@ -101,6 +128,7 @@ const portfolioData = {
       ]
     },
   ]
+  
   };
 
   export default portfolioData;
