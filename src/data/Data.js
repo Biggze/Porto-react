@@ -96,6 +96,16 @@ const portfolioData = {
   imageUrl: '/img/io23.png',
   description: '...',
   jobdesk:""
+},
+{
+  id: 4,
+  title: 'Himpunan Mahasiswa Informatika Universitas Jember',
+  issuer: 'Universitas Jember',
+  role: 'Kepala Divisi Content Creator', 
+  year: '2025',
+  imageUrl: '/img/io23.png',
+  description: '...',
+  jobdesk:""
 }
 ],
 
