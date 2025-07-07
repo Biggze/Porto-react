@@ -16,16 +16,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import Certificates from './pages/Certificates.jsx';
 
 export default function App() {
-  // State untuk tema (terang/gelap)
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) return savedTheme;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return 'light';
-  });
-
+const [theme, setTheme] = useState('light');
   // useEffect untuk menerapkan kelas 'dark' pada elemen <html>
   useEffect(() => {
     const root = window.document.documentElement;

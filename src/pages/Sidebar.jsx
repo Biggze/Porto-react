@@ -4,16 +4,18 @@ import {
     Home as HomeIcon, User, Award, Briefcase, BarChart2, 
     MessageSquare, Mail, ArrowRight, Sun, Moon 
 } from 'react-feather';
-import portfolioData from '../data/Data.js'; // Pastikan path ini benar
+import portfolioData from '../data/Data.js';// Pastikan path ini benar
 
-const NavItem = ({ icon, label, to }) => {
+const NavItem = ({ icon, label, to, onClick }) => {
   const location = useLocation();
   const isActive = location.pathname === to;
 
   return (
     <li>
+      {/* Menerapkan 'onClick' pada Link untuk menutup menu saat navigasi */}
       <Link 
         to={to} 
+        onClick={onClick}
         className={`flex items-center justify-between px-4 py-2.5 rounded-lg transition-colors duration-200 ${isActive ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white font-semibold' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'}`}
       >
         <div className="flex items-center space-x-3">
@@ -26,15 +28,14 @@ const NavItem = ({ icon, label, to }) => {
   );
 };
 
-const Sidebar = ({ theme, onThemeToggle }) => {
+const Sidebar = ({ theme, onThemeToggle, onClose }) => {
     const navItems = [
       { icon: <HomeIcon size={20} />, label: 'Home', to: '/' },
       { icon: <User size={20} />, label: 'About', to: '/about' },
-      // { icon: <Award size={20} />, label: 'Achievements', to: '/achievements' },
+      { icon: <Award size={20} />, label: 'Sertifikat', to: '/certificates' }, 
       { icon: <Briefcase size={20} />, label: 'Projects', to: '/projects' },
-       { icon: <Award size={20} />, label: 'Sertifikat', to: '/certificates' }, 
       { icon: <BarChart2 size={20} />, label: 'Dashboard', to: '/dashboard' },
-       { icon: <Briefcase size={20} />, label: 'Articles', to: '/articles' },
+      { icon: <Briefcase size={20} />, label: 'Articles', to: '/articles' },
       { icon: <Mail size={20} />, label: 'Contact', to: '/contact' },
     ];
   
