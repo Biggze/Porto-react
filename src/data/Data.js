@@ -110,7 +110,7 @@ const portfolioData = {
   issuer: 'Universitas Jember',
   role: 'Kepala Divisi Content Creator', 
   year: '2025',
-  imageUrl: '/img/io23.png',
+  imageUrl: '/img/sertifhmif.png',
   description: '...',
   jobdesk:""
 }

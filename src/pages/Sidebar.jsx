@@ -12,7 +12,6 @@ const NavItem = ({ icon, label, to, onClick }) => {
 
   return (
     <li>
-      {/* Menerapkan 'onClick' pada Link untuk menutup menu saat navigasi */}
       <Link 
         to={to} 
         onClick={onClick}
