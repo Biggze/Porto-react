@@ -60,11 +60,17 @@ const portfolioData = {
 ],
     education: { university: "Jember University", degree: "Bachelor's degree ⋅ Informatics,", duration: "2022 - Present", location: "Jember, Indonesia", logo: "img/UNEJ.png" },
     projects: [
-      { id: 1, title: "Sistem Kepegawaian",slug: "sistem-kepegawaian", description: "This Employee Management System simplifies HR processes including performance evaluation, warning letter generation, and online asset borrowing. Built to improve efficiency and transparency in HR operations.", image: "/img/kepegawaian.png", featured: true, tech: ["Laravel", "HTML","CSS","JavaScript","PHP"] },
-      { id: 2, title: "Personal Website",slug:"personal-website", description: "Personal website & portfolio, built using React.JS,TailwindCSS", image: "/img/porto.png", featured: true, tech: ["ReactJS","TailwindCSS"] },
-      { id: 3, title: "Pengembangan Capstone",slug: "pengembangan-capstone", description: "A website designed to help lecturers easily manage student data for those who have registered or will register for the capstone project.", image: "/img/capstone.png", featured: false, login: true, tech: ["ReactJS", "ExpressJS", "Tailwind"] },
-      { id: 4, title: "Sipetani",slug: "sipetani", description: "A website designed to assist farmers in predicting soil pH levels, which helps determine whether the land is suitable for planting certain crops, using Artificial Intelligence.", image: "/img/Sipetani.png", featured: false, tech: ["Laravel", "HTML", "CSS","JavaScript"] },
-      { id: 5, title: "Kamera",slug: "kamera", description: "A website designed as an e-commerce platform for electronic camera transactions, assisting users in ordering various types of cameras and tripods, while also enabling partners to monitor their products and delivery status.", image: "/img/kamera.png", featured: false, tech: ["Laravel", "HTML", "Tailwind","JavaScript"] }
+      { id: 1, title: "Sistem Kepegawaian",slug: "sistem-kepegawaian", description: "This Employee Management System simplifies HR processes including performance evaluation, warning letter generation, and online asset borrowing. Built to improve efficiency and transparency in HR operations.",sourceCodeUrl: '#',
+       image: "/img/kepegawaian.png", featured: true, tech: ["Laravel", "HTML","CSS","JavaScript","PHP"] },
+      { id: 2, title: "Personal Website",slug:"personal-website", description: "Personal website & portfolio, built using React.JS,TailwindCSS", sourceCodeUrl: 'https://github.com/Biggze/Porto-react',
+      image: "/img/porto.png", featured: true, tech: ["ReactJS","TailwindCSS"] },
+      { id: 3, title: "Pengembangan Capstone",sourceCodeUrl: '#',
+      slug: "pengembangan-capstone", description: "A website designed to help lecturers easily manage student data for those who have registered or will register for the capstone project.", image: "/img/capstone.png", featured: false, login: true, tech: ["ReactJS", "ExpressJS", "Tailwind"] },
+      { id: 4, title: "Sipetani",slug: "sipetani", description: "A website designed to assist farmers in predicting soil pH levels, which helps determine whether the land is suitable for planting certain crops, using Artificial Intelligence.", sourceCodeUrl: 'https://github.com/ASyarifH/PPL_E3',
+      image: "/img/Sipetani.png", featured: false, tech: ["Laravel", "HTML", "CSS","JavaScript"] },
+      { id: 5, title: "Kamera",slug: "kamera", description: "A website designed as an e-commerce platform for electronic camera transactions, assisting users in ordering various types of cameras and tripods, while also enabling partners to monitor their products and delivery status.",
+      sourceCodeUrl: 'https://github.com/Biggze/Kamera',
+       image: "/img/kamera.png", featured: false, tech: ["Laravel", "HTML", "Tailwind","JavaScript"] }
     ],
 
   certificates : [
