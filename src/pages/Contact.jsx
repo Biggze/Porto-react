@@ -21,7 +21,6 @@ const SocialCard = ({ href, icon, title, description, buttonText, gradient }) =>
     </a>
 );
 
-// Komponen utama halaman Contact
 const Contact = () => {
     return (
         <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 p-8 rounded-2xl shadow-sm">
