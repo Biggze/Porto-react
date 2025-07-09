@@ -33,7 +33,6 @@ const Projects = () => (
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white">{project.title}</h3>
                     <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm leading-relaxed">{project.description}</p>
-                    {/* Di sini Anda bisa menambahkan ikon teknologi jika mau */}
                 </Link>
             ))}
         </div>
