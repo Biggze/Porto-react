@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Menu as MenuIcon } from 'react-feather'; // Impor ikon Menu
 
 // Impor komponen halaman dan sidebar
 import Sidebar from './pages/Sidebar.jsx';
@@ -16,8 +17,10 @@ import Dashboard from './pages/Dashboard.jsx';
 import Certificates from './pages/Certificates.jsx';
 
 export default function App() {
-const [theme, setTheme] = useState('light');
-  // useEffect untuk menerapkan kelas 'dark' pada elemen <html>
+  const [theme, setTheme] = useState('light');
+  // State untuk mengontrol visibilitas sidebar di mobile
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
   useEffect(() => {
     const root = window.document.documentElement;
     if (theme === 'dark') {
@@ -30,25 +33,46 @@ const [theme, setTheme] = useState('light');
     }
   }, [theme]);
 
-  // Fungsi untuk mengganti tema
   const handleThemeToggle = () => {
     setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  // Fungsi untuk menutup sidebar
+  const closeSidebar = () => {
+    setSidebarOpen(false);
   };
 
   return (
     <Router>
       <div className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-300 min-h-screen">
         <div className="container mx-auto p-4 md:p-8">
-          {/* INI BAGIAN KUNCI UNTUK RESPONSIVE LAYOUT */}
+
+          {/* Tombol Hamburger untuk Mobile */}
+          <button
+            onClick={() => setSidebarOpen(true)}
+            className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-white dark:bg-gray-800 rounded-md shadow-md"
+            aria-label="Open sidebar"
+          >
+            <MenuIcon size={24} />
+          </button>
+
+          {/* Overlay yang muncul saat sidebar terbuka di mobile */}
+          {isSidebarOpen && (
+            <div
+              onClick={closeSidebar}
+              className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+            ></div>
+          )}
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
             {/* Kolom untuk Sidebar */}
-            <Sidebar 
+            <Sidebar
               theme={theme}
               onThemeToggle={handleThemeToggle}
-              
+              isSidebarOpen={isSidebarOpen} // kirim state
+              onClose={closeSidebar}       // kirim fungsi close
             />
-            
+
             {/* Kolom untuk Konten Utama */}
             <main className="lg:col-span-9">
               <Routes>
@@ -64,7 +88,6 @@ const [theme, setTheme] = useState('light');
                 <Route path="*" element={<Home />} /> {/* Fallback route */}
               </Routes>
             </main>
-
           </div>
         </div>
       </div>
