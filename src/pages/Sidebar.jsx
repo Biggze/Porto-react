@@ -4,9 +4,33 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
     Home as HomeIcon, User, Award, Briefcase, BarChart2,
-    MessageSquare, Mail, ArrowRight, Sun, Moon, X as XIcon // Impor Ikon X
+    MessageSquare, Mail, ArrowRight, Sun, Moon, X as XIcon
 } from 'react-feather';
 import portfolioData from '../data/Data.js'; // Pastikan path ini benar
+
+// --- KOMPONEN BARU UNTUK SKILLS ---
+// Komponen ini akan menampilkan daftar skill dengan animasi berjalan
+const SkillsScroller = ({ skills }) => {
+  // Trik untuk loop tak terbatas: kita duplikasi daftar skill.
+  // Saat set pertama selesai, set kedua sudah siap menggantikan, menciptakan ilusi loop.
+  const duplicatedSkills = [...skills, ...skills];
+
+  return (
+    <div className="scroller w-full" data-speed="slow">
+      <ul className="scroller__inner">
+        {duplicatedSkills.map((skill, index) => (
+          <li
+            key={index}
+            className="flex-shrink-0 px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
+          >
+            {skill}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
 
 const NavItem = ({ icon, label, to, onClick }) => {
   const location = useLocation();
@@ -29,7 +53,6 @@ const NavItem = ({ icon, label, to, onClick }) => {
   );
 };
 
-// Terima props isSidebarOpen dan onClose dari App.js
 const Sidebar = ({ theme, onThemeToggle, isSidebarOpen, onClose }) => {
   const navItems = [
     { icon: <HomeIcon size={20} />, label: 'Home', to: '/' },
@@ -41,7 +64,6 @@ const Sidebar = ({ theme, onThemeToggle, isSidebarOpen, onClose }) => {
     { icon: <Mail size={20} />, label: 'Contact', to: '/contact' },
   ];
 
-  // Kelas CSS untuk mengatur transisi dan visibilitas
   const sidebarClasses = `
     fixed inset-y-0 left-0 z-40 w-[280px] h-full overflow-y-auto bg-white dark:bg-gray-800
     transform transition-transform duration-300 ease-in-out
@@ -50,9 +72,7 @@ const Sidebar = ({ theme, onThemeToggle, isSidebarOpen, onClose }) => {
   `;
 
   return (
-    // Gunakan kelas yang sudah didefinisikan
     <aside className={sidebarClasses}>
-      {/* Tombol Close di dalam sidebar, hanya muncul di mobile */}
       <button
         onClick={onClose}
         className="lg:hidden absolute top-4 right-4 p-1 text-gray-500 hover:text-gray-800 dark:hover:text-white"
@@ -75,11 +95,17 @@ const Sidebar = ({ theme, onThemeToggle, isSidebarOpen, onClose }) => {
         </div>
         <nav className="mt-5">
           <ul className="space-y-2">
-            {/* Kirim props `onClose` ke setiap NavItem agar sidebar tertutup saat link di-klik */}
             {navItems.map(item => <NavItem key={item.label} {...item} onClick={onClose} />)}
           </ul>
         </nav>
-        <div className="mt-2 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
+
+        {/* --- BAGIAN SKILLS DITAMBAHKAN DI SINI --- */}
+        <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+          <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 text-center mb-4">SKILLS</h2>
+          <SkillsScroller skills={portfolioData.skills || []} />
+        </div>
+
+        <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-xs text-gray-500">COPYRIGHT © 2025</p>
           <p className="text-xs text-gray-500">{portfolioData.profile.name}. All rights reserved.</p>
         </div>
