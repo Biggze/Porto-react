@@ -77,7 +77,7 @@ const portfolioData = {
 {
   id: 2,
   title: 'Informatics Olympiad', 
-  issuer: 'Universitas ABC',
+  issuer: 'Himpunan Mahasiswa Informatika Universitas Jember',
   role: 'Ketua Panitia', 
   year: '2022',
   imageUrl: '/img/IO.png',
@@ -87,7 +87,7 @@ const portfolioData = {
 {
   id: 3,
   title: 'IF Order',
-  issuer: 'Dicoding Indonesia',
+  issuer: 'Himpunan Mahasiswa Informatika Universitas Jember',
   role: 'Coordinator Perlengkapan', 
   year: '2022',
   imageUrl: '/img/diklat.png',
@@ -97,7 +97,7 @@ const portfolioData = {
 {
   id: 4,
   title: 'Informatics Olympiad',
-  issuer: 'Dicoding Indonesia',
+  issuer: 'Himpunan Mahasiswa Informatika Universitas Jember',
   role: 'Coordinator Perlengkapan', 
   year: '2022',
   imageUrl: '/img/io23.png',
