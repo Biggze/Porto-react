@@ -23,7 +23,7 @@ const SkillsScroller = ({ skills }) => {
             key={index}
             className="flex-shrink-0 px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
           >
-            {skill}
+            {/* {skill} */}
           </li>
         ))}
       </ul>
@@ -100,10 +100,10 @@ const Sidebar = ({ theme, onThemeToggle, isSidebarOpen, onClose }) => {
         </nav>
 
         {/* --- BAGIAN SKILLS DITAMBAHKAN DI SINI --- */}
-        <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+        {/* <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
           <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 text-center mb-4">SKILLS</h2>
           <SkillsScroller skills={portfolioData.skills || []} />
-        </div>
+        </div> */}
 
         <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-xs text-gray-500">COPYRIGHT © 2025</p>
