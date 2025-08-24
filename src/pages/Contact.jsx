@@ -1,30 +1,87 @@
+// src/pages/Contact.jsx
 
 import React from 'react';
-import { Mail, Instagram, Linkedin,GitHub, Send ,Facebook} from 'react-feather';
+import { motion } from 'framer-motion';
+import { Mail, Instagram, Linkedin, GitHub, Send, Facebook } from 'react-feather';
 import portfolioData from '../data/Data.js'; 
 
+// Varian animasi untuk container
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.15, // Jeda antar item yang dianimasikan
+        },
+    },
+};
+
+// Varian animasi untuk kartu sosial (slide-in)
+const cardVariants = {
+    hidden: { x: -30, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut"
+        },
+    },
+};
+
+// Varian animasi untuk form (fade-in-up)
+const formVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut"
+        },
+    },
+};
+
+
 const SocialCard = ({ href, icon, title, description, buttonText, gradient }) => (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={`block p-6 rounded-xl text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ${gradient}`}>
+    <motion.a 
+        href={href} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className={`block p-6 rounded-xl text-white shadow-lg ${gradient}`}
+        variants={cardVariants}
+        whileHover={{ y: -5, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)" }}
+        transition={{ duration: 0.3 }}
+    >
         <div className="flex justify-between items-center">
             <div>
                 <h4 className="font-bold text-lg">{title}</h4>
                 <p className="text-sm opacity-80 mt-1">{description}</p>
             </div>
-            <div className="bg-white/20 p-3 rounded-lg">
+            <motion.div 
+                className="bg-white/20 p-3 rounded-lg"
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
+            >
                 {icon}
-            </div>
+            </motion.div>
         </div>
         <div className="mt-4 inline-flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-white/30 transition-colors">
             <span>{buttonText}</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
         </div>
-    </a>
+    </motion.a>
 );
 
 const Contact = () => {
     return (
-        <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 p-8 rounded-2xl shadow-sm">
-            
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 p-8 rounded-2xl shadow-sm"
+        >
             <div className="pb-8">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Contact</h2>
                 <p className="text-gray-500 dark:text-gray-400 mt-1">Let's get in touch</p>
@@ -32,7 +89,12 @@ const Contact = () => {
 
             <hr className="my-6 border-dashed border-gray-200 dark:border-gray-700" />
 
-            <div className="mb-10">
+            <motion.div 
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="mb-10"
+            >
                 <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">Find me on social media</h3>
                 
                 <SocialCard 
@@ -54,7 +116,7 @@ const Contact = () => {
                         gradient="bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500"
                     />
                     <SocialCard 
-                        href="www.linkedin.com/in/adelnovalalfarizi"
+                        href="https://www.linkedin.com/in/adelnovalalfarizi"
                         icon={<Linkedin size={32} />}
                         title="Let's Connect"
                         description="Connect for collaboration or explore my professional experience."
@@ -78,9 +140,14 @@ const Contact = () => {
                         gradient="bg-gradient-to-br from-gray-700 to-gray-900"
                     />
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="pt-8 mt-8 border-t border-gray-200 dark:border-gray-700">
+            <motion.div 
+                variants={formVariants}
+                initial="hidden"
+                animate="visible"
+                className="pt-8 mt-8 border-t border-gray-200 dark:border-gray-700"
+            >
                 <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">Or send me a message</h3>
                 <form action="#" method="POST">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -101,9 +168,9 @@ const Contact = () => {
                         </button>
                     </div>
                 </form>
-            </div>
+            </motion.div>
 
-        </div>
+        </motion.div>
     );
 };
 

@@ -3,18 +3,18 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Menu as MenuIcon } from 'react-feather'; // Impor ikon Menu
+import { AnimatePresence } from 'framer-motion';
 
-// Impor komponen halaman dan sidebar
 import Sidebar from './pages/Sidebar.jsx';
 import Home from './pages/Home_temp.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
 import ProjectDetail from './pages/ProjectDetail.jsx';
-import Articles from './pages/Articles.jsx';
-import ArticleDetail from './pages/ArticleDetail.jsx';
+
 import Contact from './pages/Contact.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import Certificates from './pages/Certificates.jsx';
+import Editing from './pages/Editing.jsx';
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -47,7 +47,6 @@ export default function App() {
       <div className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-300 min-h-screen">
         <div className="container mx-auto p-4 md:p-8">
 
-          {/* Tombol Hamburger untuk Mobile */}
           <button
             onClick={() => setSidebarOpen(true)}
             className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-white dark:bg-gray-800 rounded-md shadow-md"
@@ -56,7 +55,6 @@ export default function App() {
             <MenuIcon size={24} />
           </button>
 
-          {/* Overlay yang muncul saat sidebar terbuka di mobile */}
           {isSidebarOpen && (
             <div
               onClick={closeSidebar}
@@ -65,7 +63,6 @@ export default function App() {
           )}
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Kolom untuk Sidebar */}
             <Sidebar
               theme={theme}
               onThemeToggle={handleThemeToggle}
@@ -75,18 +72,21 @@ export default function App() {
 
             {/* Kolom untuk Konten Utama */}
             <main className="lg:col-span-9">
+               <AnimatePresence mode="wait">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/:slug" element={<ProjectDetail />} />
                 <Route path="/certificates" element={<Certificates />} />
-                <Route path="/articles" element={<Articles />} />
-                <Route path="/articles/:slug" element={<ArticleDetail />} />
+                {/* <Route path="/articles" element={<Articles />} />
+                <Route path="/articles/:slug" element={<ArticleDetail />} /> */}
+                <Route path="/editing" element={<Editing />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="*" element={<Home />} /> {/* Fallback route */}
               </Routes>
+              </AnimatePresence>
             </main>
           </div>
         </div>

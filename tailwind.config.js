@@ -1,29 +1,31 @@
-
-
 /** @type {import('tailwindcss').Config} */
-const config = {
+export default {
+  darkMode: 'class',
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./common/**/*.{js,ts,jsx,tsx,mdx}",
-    "./modules/**/*.{js,ts,jsx,tsx,mdx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      colors: {
-        darkText: "#E4E6EB",
-        dark: "#121212",
-        light: "#fafafa",
+      // PERBAIKAN: Gabungkan kedua animasi ke dalam satu objek 'animation'
+      animation: {
+        'infinite-scroll': 'infinite-scroll 40s linear infinite',
+        'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      keyframes: {
+        "fade-in-up": {
+            '0%': { opacity: '0', transform: 'translateY(20px)' },
+            '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        // Tambahkan keyframes untuk infinite-scroll di sini juga
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+      }
     },
   },
-  plugins: [],
-  darkMode: "class",
-};
-export default config;
+  plugins: [
+    require('@tailwindcss/container-queries'),
+  ],
+}

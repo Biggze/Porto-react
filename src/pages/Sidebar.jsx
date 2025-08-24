@@ -4,14 +4,10 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
     Home as HomeIcon, User, Award, Briefcase, BarChart2,
-    MessageSquare, Mail, ArrowRight, Sun, Moon, X as XIcon
+    MessageSquare, Mail, ArrowRight, Sun, Moon, X as XIcon,Film,
 } from 'react-feather';
-import portfolioData from '../data/Data.js'; // Pastikan path ini benar
-
-// --- KOMPONEN BARU UNTUK SKILLS ---
-// Komponen ini akan menampilkan daftar skill dengan animasi berjalan
+import portfolioData from '../data/Data.js'; 
 const SkillsScroller = ({ skills }) => {
-  // Trik untuk loop tak terbatas: kita duplikasi daftar skill.
   // Saat set pertama selesai, set kedua sudah siap menggantikan, menciptakan ilusi loop.
   const duplicatedSkills = [...skills, ...skills];
 
@@ -60,7 +56,8 @@ const Sidebar = ({ theme, onThemeToggle, isSidebarOpen, onClose }) => {
     { icon: <Award size={20} />, label: 'Sertifikat', to: '/certificates' },
     { icon: <Briefcase size={20} />, label: 'Projects', to: '/projects' },
     { icon: <BarChart2 size={20} />, label: 'Dashboard', to: '/dashboard' },
-    { icon: <Briefcase size={20} />, label: 'Articles', to: '/articles' },
+    { icon: <Film size={20} />, label: 'Editing', to: '/editing' }, 
+    // { icon: <Briefcase size={20} />, label: 'Articles', to: '/articles' },
     { icon: <Mail size={20} />, label: 'Contact', to: '/contact' },
   ];
 
@@ -98,13 +95,6 @@ const Sidebar = ({ theme, onThemeToggle, isSidebarOpen, onClose }) => {
             {navItems.map(item => <NavItem key={item.label} {...item} onClick={onClose} />)}
           </ul>
         </nav>
-
-        {/* --- BAGIAN SKILLS DITAMBAHKAN DI SINI --- */}
-        {/* <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-          <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 text-center mb-4">SKILLS</h2>
-          <SkillsScroller skills={portfolioData.skills || []} />
-        </div> */}
-
         <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-xs text-gray-500">COPYRIGHT © 2025</p>
           <p className="text-xs text-gray-500">{portfolioData.profile.name}. All rights reserved.</p>
