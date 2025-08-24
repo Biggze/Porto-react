@@ -21,6 +21,7 @@ const portfolioData = {
     duration: "Dec 2022 - Present ⋅ 2 Years, 7 Months",
     type: "Part-time ⋅ Onsite",
     logo: "img/HMIF.png",
+    loading :"lazy",
     responsibilities: [
       "Leading the Content Creator Division to manage digital presence and branding of HMIF UNEJ.",
       "Planning and supervising the production of social media content and visual design.",
@@ -35,6 +36,7 @@ const portfolioData = {
     duration: "Mar 2025 - Jul 2025 ⋅ 4 Months",
     type: "Full-Time ⋅ Onsite",
     logo: "img/Picture1.png",
+      loading :"lazy",
     responsibilities: [
       "Developed responsive front-end interfaces using HTML, CSS, JavaScript, and Bootstrap.",
       "Sliced UI designs from Figma into fully functional, client-ready web pages.",
@@ -49,6 +51,7 @@ const portfolioData = {
     location: "Jember, Indonesia",
     duration: "Aug 2024 - Nov 2024 ⋅ 3 Months",
     type: "Project ⋅ Full-Time",
+      loading :"lazy",
     logo: "https://placehold.co/50x50/E2E8F0/4A5568?text=A",
     responsibilities: [
       "Developed core features using React.js for a faculty-based web application.",
@@ -61,14 +64,14 @@ const portfolioData = {
     education: { university: "Jember University", degree: "Bachelor's degree ⋅ Informatics,", duration: "2022 - Present", location: "Jember, Indonesia", logo: "img/UNEJ.png" },
     projects: [
       { id: 1, title: "Sistem Kepegawaian",slug: "sistem-kepegawaian", description: "This Employee Management System simplifies HR processes including performance evaluation, warning letter generation, and online asset borrowing. Built to improve efficiency and transparency in HR operations.",sourceCodeUrl: '#',
-       image: "/img/kepegawaian.png", featured: true, tech: ["Laravel", "HTML","CSS","JavaScript","PHP"] },
+       image: "/img/kepegawaian.png",  loading :"lazy", featured: true, tech: ["Laravel", "HTML","CSS","JavaScript","PHP"] },
       { id: 2, title: "Personal Website",slug:"personal-website", description: "Personal website & portfolio, built using React.JS,TailwindCSS", sourceCodeUrl: 'https://github.com/Biggze/Porto-react',
-      image: "/img/porto.png", featured: true, tech: ["ReactJS","TailwindCSS"] },
+      image: "/img/porto.png",  loading :"lazy", featured: true, tech: ["ReactJS","TailwindCSS"] },
       { id: 3, title: "Pengembangan Capstone",sourceCodeUrl: '#',
-      slug: "pengembangan-capstone", description: "A website designed to help lecturers easily manage student data for those who have registered or will register for the capstone project.", image: "/img/capstone.png", featured: false, login: true, tech: ["ReactJS", "ExpressJS", "Tailwind"] },
-      { id: 4, title: "Sipetani",slug: "sipetani", description: "A website designed to assist farmers in predicting soil pH levels, which helps determine whether the land is suitable for planting certain crops, using Artificial Intelligence.", sourceCodeUrl: 'https://github.com/ASyarifH/PPL_E3',
+      slug: "pengembangan-capstone",  loading :"lazy", description: "A website designed to help lecturers easily manage student data for those who have registered or will register for the capstone project.", image: "/img/capstone.png", featured: false, login: true, tech: ["ReactJS", "ExpressJS", "Tailwind"] },
+      { id: 4, title: "Sipetani",  loading :"lazy",slug: "sipetani", description: "A website designed to assist farmers in predicting soil pH levels, which helps determine whether the land is suitable for planting certain crops, using Artificial Intelligence.", sourceCodeUrl: 'https://github.com/ASyarifH/PPL_E3',
       image: "/img/Sipetani.png", featured: false, tech: ["Laravel", "HTML", "CSS","JavaScript"] },
-      { id: 5, title: "Kamera",slug: "kamera", description: "A website designed as an e-commerce platform for electronic camera transactions, assisting users in ordering various types of cameras and tripods, while also enabling partners to monitor their products and delivery status.",
+      { id: 5, title: "Kamera",  loading :"lazy",slug: "kamera", description: "A website designed as an e-commerce platform for electronic camera transactions, assisting users in ordering various types of cameras and tripods, while also enabling partners to monitor their products and delivery status.",
       sourceCodeUrl: 'https://github.com/Biggze/Kamera',
        image: "/img/kamera.png", featured: false, tech: ["Laravel", "HTML", "Tailwind","JavaScript"] }
     ],
@@ -81,6 +84,7 @@ const portfolioData = {
   role: 'Ketua Panitia', 
   year: '2022',
   imageUrl: '/img/IO.png',
+    loading :"lazy",
   description: '...',
   jobdesk: '...'
 },
@@ -91,6 +95,7 @@ const portfolioData = {
   role: 'Coordinator Perlengkapan', 
   year: '2022',
   imageUrl: '/img/diklat.png',
+    loading :"lazy",
   description: '...',
   jobdesk:""
 },
@@ -101,6 +106,7 @@ const portfolioData = {
   role: 'Coordinator Perlengkapan', 
   year: '2022',
   imageUrl: '/img/io23.png',
+    loading :"lazy",
   description: '...',
   jobdesk:""
 },
@@ -111,6 +117,7 @@ const portfolioData = {
   role: 'Kepala Divisi Content Creator', 
   year: '2025',
   imageUrl: '/img/sertifhmif.png',
+    loading :"lazy",
   description: '...',
   jobdesk:""
 }
