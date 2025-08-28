@@ -30,7 +30,7 @@ const getSkillIcon = (skillName) => {
     return iconMap[name] || null;
 };
 
-// Varian animasi untuk container dan item
+// Varian animasi untuk container
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,16 +41,27 @@ const containerVariants = {
     },
 };
 
-const itemVariants = {
+// PERUBAHAN: Varian animasi baru untuk tag skill (initial load + hover)
+const skillTagVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
         y: 0,
         opacity: 1,
-        transition: {
-            duration: 0.5,
-            ease: "easeOut"
-        },
+        transition: { duration: 0.5, ease: "easeOut" }
     },
+    hover: {
+        y: -5,
+        scale: 1.1,
+        transition: { type: "spring", stiffness: 300 }
+    }
+};
+
+// PERUBAHAN: Varian animasi baru HANYA untuk ikon di dalam tag
+const skillIconVariants = {
+    hover: {
+        rotate: 360,
+        transition: { duration: 0.5, ease: "easeInOut" }
+    }
 };
 
 // Varian animasi untuk teks "mengetik"
@@ -132,10 +143,18 @@ const Home = () => {
                         return (
                             <motion.li
                                 key={index}
-                                variants={itemVariants}
-                                className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg flex items-center"
+                                variants={skillTagVariants}
+                                whileHover="hover"
+                                className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg flex items-center cursor-pointer hover:bg-blue-500 hover:text-white dark:hover:text-white transition-colors duration-200"
                             >
-                                {iconSrc && <img src={iconSrc} alt={`${skill} icon`} className="w-5 h-5 mr-2" />}
+                                {iconSrc && (
+                                    <motion.img
+                                        src={iconSrc}
+                                        alt={`${skill} icon`}
+                                        className="w-5 h-5 mr-2"
+                                        variants={skillIconVariants}
+                                    />
+                                )}
                                 {skill}
                             </motion.li>
                         );
